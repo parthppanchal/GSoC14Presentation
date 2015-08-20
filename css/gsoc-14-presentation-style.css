@@ -52,14 +52,6 @@ table {
 body {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     min-height: 740px;
-
-    background: rgb(215, 215, 215);
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
-    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
 }
 
 
@@ -168,12 +160,6 @@ a:focus {
     text-align: center;
     font-size: 190px;
     font-weight: bold;
-
-    -webkit-transform: translateZ(50px);
-    -moz-transform:    translateZ(50px);
-    -ms-transform:     translateZ(50px);
-    -o-transform:      translateZ(50px);
-    transform:         translateZ(50px);
 }
 
 .title h3 {
@@ -181,12 +167,6 @@ a:focus {
     text-align: center;
     font-size: 100px;
     font-weight: bold;
-
-    -webkit-transform: translateZ(50px);
-    -moz-transform:    translateZ(50px);
-    -ms-transform:     translateZ(50px);
-    -o-transform:      translateZ(50px);
-    transform:         translateZ(50px);
 }
 
 
@@ -194,10 +174,82 @@ a:focus {
     font-size: 32px;
 }
 
-span.empid {
- color: #028090;
- padding: 0 5px;
- float: right;
+/*
+ * TITLE STEP
+ * =============================================================================
+ */
+
+#impress.step-title .step { opacity: 0.1; }
+
+#impress.step-title .active { opacity: 1; }
+
+@keyframes rotate-h1 {
+        0%   { transform: perspective(1000px) rotateY(-10deg); }
+        100% { transform: perspective(1000px) rotateY(10deg); }
+}
+
+#title {
+    padding: 0;
+}
+
+#title h1 {
+    bottom: 10px;
+    text-align: center;
+    font-size: 190px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+#title h3 {
+    bottom: 10px;
+    text-align: center;
+    font-size: 100px;
+    line-height: 1.1;
+    color: #FA6900;
+
+    transform-style: preserve-3d;
+    animation: rotate-h1 2s infinite alternate ease-in-out;
+
+    transform: perspective(1000px) rotateY(0deg);
+
+    transition: all 2s ease-in-out;
+}
+
+#title h3 .gtg {
+    text-transform: uppercase;
+    font-size: 70px;
+}
+
+#title h3 .backend {
+    font-size: 140px;
+    font-weight: bold;
+    font-family: 'Crimson Text', georgia, times, serif;
+    color: #00aced;
+
+    transform: translateY(-0.6em) translateZ(50px);
+}
+
+#title .author {
+    display: block;
+    width: 400px;
+    margin: 50px auto 0;
+    text-align: center;
+    font-weight: normal;
+    line-height: 1.5;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#title .author .name {
+    color: #00aced;
+}
+
+#title.active .author {
+    opacity: 1;
+}
+
+#guadec .guadec-logo{
+    color: #6C8E9E;
 }
 
 li .member {

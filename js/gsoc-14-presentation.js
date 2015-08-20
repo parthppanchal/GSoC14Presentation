@@ -29,8 +29,7 @@ $( document ).ready(function() {
     }
 
 animation('members', '.member', 'zoomInUp');
-animation('intro', 'h1', 'bounceInDown');
-animation('intro', 'p', 'bounceInUp');
+animation('title', '.author', 'bounceInUp');
 animation('report', '#scaling', 'swing');
 
 
