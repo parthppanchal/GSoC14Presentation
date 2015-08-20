@@ -269,6 +269,10 @@ a:focus {
     color: #6C8E9E;
 }
 
+#gtg-tasks img {
+    padding: 0 0 0 80px;
+}
+
 li .member {
   list-style: none;
   color: #FF5714;
