@@ -73,6 +73,91 @@
             <img src="img/gtg-flow.svg" />
         </div>
 
+        <div id="core-service" class="step title" data-x="1800" data-y="-1000" data-z="-250" data-rotate-z="60" data-rotate-x="-105">
+            <h1>Core Service</h1>
+            <ol>
+                <li>An interface to requester for the services, as the datastore is an interface to liblarch tree for the requester</li>
+                <li>Provides a basic interface for services to modify its liblarch tree of tasks (datastore) & that of tags (tagstore)</li>
+                <li>Existing generic backend code concerning datastore and tagstore was reused</li>
+            </ol>
+        </div>
+
+        <div id="sync-engine-spec" class="step title" data-x="0" data-y="1000">
+            <h3>Sync module now handles</h3>
+            <table>
+                <tr>
+                    <th>
+                        Type
+                    </th>
+                    <th>
+                        Read/Write to liblarch tree
+                    </th>
+                    <th>
+                        Syncs
+                    </th>
+                    <th>
+                        Syncs interval
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        Local service (local XML database &amp; evolution)
+                    </td>
+                    <td>
+                        Both read &amp; write
+                    </td>
+                    <td>
+                        Both ways
+                    </td>
+                    <td>
+                        Immediate
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Synchronization service
+                    </td>
+                    <td>
+                        Both read &amp; write
+                    </td>
+                    <td>
+                        Both ways
+                    </td>
+                    <td>
+                        Every X (>0) minutes or on request
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Import
+                    </td>
+                    <td>
+                        Both read &amp; write
+                    </td>
+                    <td>
+                        Only from online service
+                    </td>
+                    <td>
+                        Every X (>0) minutes or on request
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Read only service
+                    </td>
+                    <td>
+                        Only read
+                    </td>
+                    <td>
+                        Only from online service
+                    </td>
+                    <td>
+                        Every X (>0) minutes or on request
+                    </td>
+                </tr>
+            </table>
+        </div>
+
         <div id="tech" class="step title" data-x="0" data-y="-300" data-z="-4500" data-scale="7">
             <h3>Technologies used</h3>
             <div id="myCanvasContainer">
