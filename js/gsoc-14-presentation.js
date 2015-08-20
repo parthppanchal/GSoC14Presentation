@@ -24,7 +24,7 @@ $( document ).ready(function() {
             var step = $(this);
             step.find(toFind).removeClass('animated '+animateClass);
         });
-    };
+    }
 
     $('#members .member').each(function(i){
         $(this).css({

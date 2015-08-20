@@ -24,7 +24,7 @@
     <div id="impress">
 
         <div id="title" class="step" data-scale="3">
-            <h3><span class="gtg">GTG:</span> revamping <br /><span class="backend">backend</span><br />experience</h3>
+            <h3><a href="https://www.google-melange.com/gsoc/project/details/google/gsoc2014/prth/5733935958982656"><span class="gtg">GTG:</span> revamping <br /><span class="backend">backend</span><br />experience</a></h3>
             <span class="author">
                 <i>by</i><br/>
                 <span class="name">Parth P Panchal</span><br />
@@ -47,8 +47,8 @@
         <div id="tasks" class="step title" data-x="-1800" data-y="-1000"  data-z="-250" data-rotate-z="-60" data-rotate-x="-105">
             <h1>Major tasks</h1>
             <ol>
-                <li>Stripped down the backend to respond to just basic API calls to GTG</li>
-                <li>Revamped the synchronization engine, to handle different types of services
+                <li>Stripped down the backend as core service to act on API calls from services</li>
+                <li>Revamped the sync engine, to handle different types of services
                 </li>
                 <li>Created 4 services
                     <ol id="services">
@@ -57,7 +57,6 @@
                         <li><img src="img/todoist.png" /></li>
                         <li><img src="img/rtm.png" /></li>
                     </ol>
-                    using the above implemented GTG core service API
                 </li>
                 <li>Tests!!!</li>
             </ol>
@@ -76,8 +75,7 @@
         <div id="core-service" class="step title" data-x="1800" data-y="-1000" data-z="-250" data-rotate-z="60" data-rotate-x="-105">
             <h1>Core Service</h1>
             <ol>
-                <li>An interface to requester for the services, as the datastore is an interface to liblarch tree for the requester</li>
-                <li>Provides a basic interface for services to modify its liblarch tree of tasks (datastore) & that of tags (tagstore)</li>
+                <li>Exposes operations to services to modify its liblarch tree of tasks (datastore) &amp; that of tags (tagstore)</li>
                 <li>Existing generic backend code concerning datastore and tagstore was reused</li>
             </ol>
         </div>
@@ -156,6 +154,15 @@
                     </td>
                 </tr>
             </table>
+        </div>
+
+        <div id="sync-engine" class="step title" data-x="0" data-y="1000">
+            <h3>Sync module</h3>
+            <ol>
+                <li>Summons the specific service, at specific interval specified by each instance of account</li>
+                <li>These methods then calls the basic core service (GTG API) to modify its librach trees through requester</li>
+                <li>Several helper methods were reused for handling pickle file & services connection</li>
+            </ol>
         </div>
 
         <div id="tech" class="step title" data-x="0" data-y="-300" data-z="-4500" data-scale="7">
