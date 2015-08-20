@@ -224,6 +224,7 @@ a:focus {
 
 .footnote {
     font-size: 32px;
+    float: right;
 }
 
 /*
@@ -308,6 +309,10 @@ a:focus {
     height: 70px;
 }
 
+#gtg-tasks img {
+    padding: 0 0 0 80px;
+}
+
 .circle-container {
     position: relative;
     width: 7em;
@@ -332,25 +337,68 @@ a:focus {
     color: #6C8E9E;
 }
 
-#gtg-tasks img {
-    padding: 0 0 0 80px;
+#titles
+{
+    position: absolute;
+    color: #029ECB;
+    width: 8em;
+    height: 50em;
+    bottom: -2em;
+    left: 50%;
+    margin-left: -4em;
+    font-size: 350%;
+    font-weight: bold;
+    text-align: justify;
+    overflow: hidden;
+    transform-origin: 50% 100%;
+    transform: perspective(300px) rotateX(40deg);
 }
 
-li .member {
-  list-style: none;
-  color: #FF5714;
-  border-radius: 10px;
-  line-height: 1em;
-  padding: 20px 20px;
-  overflow: hidden;
-  width: 10em;
-  height: 1em;
-  margin: 2px 0;
--webkit-transition: all 0.5s ease 0s;
--moz-transition: all 0.5s ease 0s;
--ms-transition: all 0.5s ease 0s;
--o-transition: all 0.5s ease 0s;
-transition: all 0.5s ease 0s;
+#titles li:nth-child(odd) { color: #BC0800; }
+
+.impress-enabled .step.active #titles:after
+{
+    position: absolute;
+    content: ' ';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 60%;
+    background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.impress-enabled .step.active #titlecontent
+{
+    position: absolute;
+    top: 100%;
+    animation: scroll 100s linear 3s infinite;
+}
+
+@keyframes scroll {
+    0% { top: 100%; }
+    100% { top: -170%; }
+}
+
+#open-tech h3 {
+    margin-bottom: -50px;
+}
+
+#open-tech h3 #snap {
+    color: #029ECB;
+}
+
+#open-tech h3 #deal {
+    color: #BC0800;
+}
+
+#snapdeal-logo {
+    height: 150px;
+    margin-bottom: -50px;
+}
+
+#myCanvasContainer img {
+    width: 50px;
 }
 
 .present #container {
