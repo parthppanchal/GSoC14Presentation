@@ -34,19 +34,32 @@
             </span>
         </div>
 
-        <div id="admin" class="step title" data-x="-1400" data-y="-600" data-rotate-z="-60">
-            <h1>ADMIN</h1>
-            <p>The admin user is vested the rights to create assessment with corresponding link. <br/>
-            This link will be distributed along with password through physical means.</p>
+        <div id="problems" class="step title" data-x="-1400" data-y="-600" data-rotate-z="-60">
+            <h1>Problems</h1>
+            <ol>
+                <li>Integrating with online services was heavily dependent on core app</li>
+                <li>Online service support broken after porting to Python 3</li>
+                <li>NOT able to handle different types of online service</li>
+                <li>NO provision to accomodate different nested tasks' implementation</li>
+            </ol>
         </div>
 
-        <div id="admin-fns" class="step title" data-x="-1800" data-y="-1000"  data-z="-250" data-rotate-z="-60" data-rotate-x="-105">
-            <h1>ADMIN</h1>
+        <div id="tasks" class="step title" data-x="-1800" data-y="-1000"  data-z="-250" data-rotate-z="-60" data-rotate-x="-105">
+            <h1>Major tasks</h1>
             <ol>
-                <li>Login</li>
-                <li>Create a brand new assessment</li>
-                <li>Edit some questions</li>
-                <li>If you don't like it, delete it!</li>
+                <li>Stripped down the backend to respond to just basic API calls to GTG</li>
+                <li>Revamped the synchronization engine, to handle different types of services
+                </li>
+                <li>Created 4 services
+                    <ol id="services">
+                        <li><img src="img/gtg.png" /></li>
+                        <li><img src="img/google-tasks.png" /></li>
+                        <li><img src="img/todoist.png" /></li>
+                        <li><img src="img/rtm.png" /></li>
+                    </ol>
+                    using the above implemented GTG core service API
+                </li>
+                <li>Tests!!!</li>
             </ol>
         </div>
 
