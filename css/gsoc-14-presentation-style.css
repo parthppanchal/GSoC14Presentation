@@ -308,6 +308,26 @@ a:focus {
     height: 70px;
 }
 
+.circle-container {
+    position: relative;
+    width: 7em;
+    height: 7em;
+    padding: 2.8em;
+    margin: 1.75em auto 0;
+}
+
+.circle-container a {
+    display: block;
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 4em; height: 4em;
+    margin: -2.5em;
+}
+.circle-container img { display: block; height: 120px;}
+.deg60 { transform: rotate(60deg) translate(5em) rotate(-60deg); }
+.deg180 { transform: translate(-7em); }
+.deg300 { transform: rotate(300deg) translate(5em) rotate(-300deg); }
+
 #guadec .guadec-logo{
     color: #6C8E9E;
 }
